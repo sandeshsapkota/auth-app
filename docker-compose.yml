@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=auth-app
+    volumes:
+      - auth-app_postgres-data:/var/lib/postgresql/data
+    ports:
+      - '5434:5432'
+  prisma:
+    build: ./
+    image: prismagraphql/prisma:1.13
+    depends_on:
+      - db
+    command:
+      - npx prisma migrate deploy --preview-feature
+    restart: always
+    ports:
+      - '4466:4466'
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5434/auth-app
+    volumes:
+      - ./prisma:/app/prisma
+volumes:
+  auth-app_postgres-data:

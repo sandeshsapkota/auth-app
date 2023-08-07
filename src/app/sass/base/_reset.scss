@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type='number']::-webkit-inner-spin-button {
+    opacity: 1;
+    background: transparent;
+}
+
+button{
+    font: inherit;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}

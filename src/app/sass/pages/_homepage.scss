@@ -1,0 +1,13 @@
+@import '../abstract/mixin';
+
+.brand-logo svg {
+  width: 280px;
+
+  @include respond(sm) {
+    width: 200px;
+  }
+}
+
+.empty-container{
+  height: calc(100vh - 215px);
+}
