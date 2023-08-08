@@ -1,5 +1,5 @@
 "use client"
-import '@/sass/app.scss'
+import '@/assets/sass/app.scss'
 import {Provider} from "react-redux";
 import store from "@/store/store";
 import {ReactNode} from "react";

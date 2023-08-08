@@ -1,5 +1,5 @@
 "use client"
-import Layout from "@/components/ui/layout";
+import Layout from "../../components/layout";
 import {useRef} from "react";
 
 function Dashboard() {

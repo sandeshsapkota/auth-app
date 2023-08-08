@@ -4,7 +4,7 @@ import Link from "next/link";
 import {useForm} from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup';
 import validationSchema from "@/utils/validationSchema";
-import InputField from "@/components/ui/InputField";
+import InputField from "@/components/InputField";
 import {useDispatch} from "react-redux";
 import useAuth from "@/store/useAuth";
 import authSlice from "@/store/auth.slice";

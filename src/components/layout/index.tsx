@@ -1,4 +1,4 @@
-import Header from "@/components/ui/header";
+import Header from "../header";
 import Protected from "@/hoc/Protected";
 
 const AdminLayout = (props:any) => {

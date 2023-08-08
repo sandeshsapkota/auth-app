@@ -4,17 +4,24 @@ import Link from "next/link";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import validationSchema from "@/utils/validationSchema";
-import InputField from "@/components/ui/InputField";
+import InputField from "@/components/InputField";
 import useAuth from "@/store/useAuth";
 import {useRouter} from "next/navigation";
+import {useEffect} from "react";
 
 const Page = () => {
     const {register, formState: {errors}, handleSubmit} = useForm({
         resolver: yupResolver(validationSchema)
     })
 
-    const {login, successMessage, error} = useAuth()
+    const {login, successMessage, error, token} = useAuth()
     const router = useRouter();
+
+    useEffect(() => {
+        if(token) {
+            router.push('/dashboard')
+        }
+    }, [])
 
     return (
         <div>

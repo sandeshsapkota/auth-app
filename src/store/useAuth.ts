@@ -1,7 +1,7 @@
 "use client"
 
 import {useDispatch, useSelector} from "react-redux";
-import Auth from "@/components/services/auth.service";
+import Auth from "@/services/auth.service";
 import {loginTypes, signupTypes} from "../../@types/auth";
 import authSlice, {loginFailure, loginStart, loginSuccess, setUser, invalidToken} from "@/store/auth.slice";
 

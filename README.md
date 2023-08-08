@@ -1,17 +1,5 @@
 # Auth App README
 
-## Table of Contents
-
-- [Description](#description)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Running the App](#running-the-app)
-- [Services](#services)
-- [Dependencies](#dependencies)
-- [Dev Dependencies](#dev-dependencies)
-- [Version](#version)
-- [License](#license)
 
 ## Description
 

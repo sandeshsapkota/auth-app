@@ -16,7 +16,7 @@ const InputField = (props:InputFieldTypes) => {
                 className={"form-control"}
                 type={type || "text"}
                 id={name}
-                {...register(name)} // Register the input with React Hook Form
+                {...register(name)}
             />
             {errors[name] && (
                 <p className="text-red-600 text-xs mt-1.5">{errors[name].message}</p>

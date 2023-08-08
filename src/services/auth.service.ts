@@ -1,5 +1,5 @@
 import http from "@/utils/http";
-import {loginTypes, signupTypes} from "../../../@types/auth";
+import {loginTypes, signupTypes} from "../../@types/auth";
 
 class AuthService {
     /**
