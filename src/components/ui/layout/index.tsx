@@ -1,17 +1,14 @@
-import Protected from "@/hoc/Protected";
 import Header from "@/components/ui/header";
-import FetchProfile from "@/hoc/FetchProfile";
+import Protected from "@/hoc/Protected";
 
 const AdminLayout = (props:any) => {
     return (
-       <FetchProfile>
-           <Protected>
+       <Protected>
                <main>
                    <Header/>
                    {props.children}
                </main>
-           </Protected>
-       </FetchProfile>
+       </Protected>
     )
 }
 

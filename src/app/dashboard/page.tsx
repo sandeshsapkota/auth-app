@@ -3,9 +3,6 @@ import Layout from "@/components/ui/layout";
 import {useRef} from "react";
 
 function Dashboard() {
-    const childRef:any = useRef<any>(null);
-    const count:any = childRef && childRef?.getCount && childRef?.getCount()
-
     return (
         <Layout>
             <div className="container">

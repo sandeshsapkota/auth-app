@@ -1,12 +1,24 @@
 import useAuth from "@/store/useAuth";
-import {ReactNode} from "react";
+import {useRouter} from "next/navigation";
+import {ReactNode, useEffect} from "react";
 
 interface ProtectedProps {
     children: ReactNode
 }
 
 const Protected = (props: ProtectedProps) => {
-    const {authenticated } = useAuth();
+    const {token,fetchProfile, authenticated } = useAuth();
+    const router = useRouter();
+
+    useEffect(() => {
+        if(token){
+            fetchProfile();
+        }else{
+            router.push('/')
+        }
+    }, [token])
+
+
     return authenticated ? props.children : null;
 }
 

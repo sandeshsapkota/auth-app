@@ -1,7 +1,3 @@
-Sure, here's a README file for your project:
-
----
-
 # Auth App README
 
 ## Table of Contents
@@ -30,20 +26,21 @@ Before you begin, make sure you have the following installed:
 - Node.js (v14 or higher)
 - PostgreSQL
 - Docker (optional, for running PostgreSQL in a container)
+- Yarn (v1.0 or higher)
 
 ### Installation
 
 1. Clone this repository to your local machine:
 
    ```sh
-   git clone https://github.com/your-username/auth-app.git
+   git clone git@github.com:sandeshsapkota/auth-app.git
    cd auth-app
    ```
 
-2. Install project dependencies:
+2. Install project dependencies using Yarn:
 
    ```sh
-   npm install
+   yarn install
    ```
 
 ### Running the App
@@ -63,7 +60,7 @@ Before you begin, make sure you have the following installed:
 3. Start the development server:
 
    ```sh
-   npm run dev
+   yarn dev
    ```
 
    The app should now be accessible at `http://localhost:3000`.
@@ -93,4 +90,4 @@ This project is private and not open source.
 
 ---
 
-Feel free to customize this README to better suit your project's specific needs.
+Feel free to use this version of the README with "Yarn" as the specified package manager.
