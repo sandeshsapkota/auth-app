@@ -1,34 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Sure, here's a README file for your project:
+
+---
+
+# Auth App README
+
+## Table of Contents
+
+- [Description](#description)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the App](#running-the-app)
+- [Services](#services)
+- [Dependencies](#dependencies)
+- [Dev Dependencies](#dev-dependencies)
+- [Version](#version)
+- [License](#license)
+
+## Description
+
+This repository contains an authentication app built using technologies like Next.js, React, Redux, Prisma, and more. It provides a foundation for implementing user authentication features in a web application.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Before you begin, make sure you have the following installed:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (v14 or higher)
+- PostgreSQL
+- Docker (optional, for running PostgreSQL in a container)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone this repository to your local machine:
 
-## Learn More
+   ```sh
+   git clone https://github.com/your-username/auth-app.git
+   cd auth-app
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install project dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```sh
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Running the App
 
-## Deploy on Vercel
+1. Start the PostgreSQL database using Docker (optional):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```sh
+   docker-compose up -d
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Migrate the Prisma database:
+
+   ```sh
+   npx prisma migrate deploy --preview-feature
+   ```
+
+3. Start the development server:
+
+   ```sh
+   npm run dev
+   ```
+
+   The app should now be accessible at `http://localhost:3000`.
+
+## Services
+
+This app uses Docker and Docker Compose to manage services:
+
+- **db**: PostgreSQL database container
+- **prisma**: Prisma container for database migrations and management
+
+
+## Dev Dependencies
+
+Dev dependencies used for development:
+
+- @types/bcrypt
+- @types/jsonwebtoken
+
+## Version
+
+App Version: 0.1.0
+
+## License
+
+This project is private and not open source.
+
+---
+
+Feel free to customize this README to better suit your project's specific needs.
