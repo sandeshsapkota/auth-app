@@ -1,5 +1,18 @@
-export const getToken = () => localStorage.getItem("TOKEN_KEY");
+"use client"
+export const getToken = () => {
+    if (typeof localStorage !== "undefined") {
+       return localStorage.getItem("TOKEN_KEY")
+    }
+}
 
-export const setToken =  (token:string) => localStorage.setItem("TOKEN_KEY", token);
+export const setToken = (token: string) => {
+    if (typeof localStorage !== "undefined") {
+        localStorage.setItem("TOKEN_KEY", token)
+    }
+};
 
-export const clearToken = () => localStorage.removeItem("TOKEN_KEY");
+export const clearToken = () => {
+    if (typeof localStorage !== "undefined") {
+        localStorage.removeItem("TOKEN_KEY")
+    }
+};

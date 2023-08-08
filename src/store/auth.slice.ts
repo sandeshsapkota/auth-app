@@ -12,7 +12,7 @@ interface AuthTypes {
 }
 
 const initialState: AuthTypes = {
-    token: localStorage || getToken() || "",
+    token:  getToken() || "",
     authenticated: false,
     authenticating: false,
     signing: false,
